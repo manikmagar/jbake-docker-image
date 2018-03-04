@@ -1,4 +1,4 @@
-FROM javastreets/jbake-base
+FROM javastreets/jbake:base-latest
 
 LABEL maintainer="https://manik.magar.me"
 

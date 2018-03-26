@@ -8,10 +8,10 @@ LABEL maintainer="https://manik.magar.me"
 # Child Dockerfiles can run command `jbake` to bake or anything else.
 
 # Define environment variables.
-ENV BUILD_DATE=03032018
+ENV BUILD_DATE=03042018
 ENV JBAKE_HOME=/opt/jbake
 ENV JBAKE_USER=jbake
-ENV JBAKE_VERSION=2.5.1
+ENV JBAKE_VERSION=2.6.0
 ENV PATH ${JBAKE_HOME}/bin:$PATH
 
 # SSL Cert for downloading mule zip
@@ -30,8 +30,8 @@ USER ${JBAKE_USER}
 
 # For checksum, alpine linux needs two spaces between checksum and file name
 RUN cd ~ && wget https://dl.bintray.com/jbake/binary/jbake-${JBAKE_VERSION}-bin.zip && \
-    cd /opt && \
     unzip ~/jbake-${JBAKE_VERSION}-bin.zip && \
-    rm ~/jbake-${JBAKE_VERSION}-bin.zip
+    cd /opt && cp -R ~/jbake-${JBAKE_VERSION}-bin/* ${JBAKE_HOME}/ && \
+    rm ~/jbake-${JBAKE_VERSION}-bin.zip && rm -rf ~/jbake-${JBAKE_VERSION}-bin
 
 RUN cd /opt

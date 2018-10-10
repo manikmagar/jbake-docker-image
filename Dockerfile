@@ -3,7 +3,7 @@ FROM javastreets/jbake:base-latest
 LABEL maintainer="https://manik.magar.me"
 
 # Define environment variables.
-ENV BUILD_DATE=03042018
+ENV BUILD_DATE=10092018
 
 # Define mount points.
 VOLUME ["/site"]

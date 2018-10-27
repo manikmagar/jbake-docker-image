@@ -8,10 +8,10 @@ LABEL maintainer="https://manik.magar.me"
 # Child Dockerfiles can run command `jbake` to bake or anything else.
 
 # Define environment variables.
-ENV BUILD_DATE=10092018
+ENV BUILD_DATE=10272018
 ENV JBAKE_HOME=/opt/jbake
 ENV JBAKE_USER=jbake
-ENV JBAKE_VERSION=2.6.2
+ENV JBAKE_VERSION=2.6.3
 ENV PATH ${JBAKE_HOME}/bin:$PATH
 
 # SSL Cert for downloading mule zip
